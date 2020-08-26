@@ -1,0 +1,121 @@
+:root {
+    --main-background-blue: #e6ffff;
+    --main-light-blue: #b3ecff;
+    --main-red: #ff3300;
+    --main-orange: #ff8c1a;
+    --main-yellow: #ffff00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+/* media queries for responsiveness */
+@media (max-width: 75em) {
+    html { font-size: 60%; } }
+
+@media (max-width: 61.25em) {
+    html { font-size: 58%; } }
+
+@media (max-width: 28.75em) {
+    html { font-size: 55%; } }
+
+/* base styling */
+body {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+h1, h2, h3, h4 { font-weight: 700; }
+
+h1 { font-size: 4rem; }
+
+h2 { font-size: 3.6rem; }
+
+h3 { font-size: 2.7rem; }
+
+h4 { font-size: 2.2rem; }
+
+img {
+    display: block;
+    width: 100%;
+}  
+
+/* single ticket */
+.ticket {
+    margin: 1em;
+    background-color: var(--main-background-blue);
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    padding-right: 1em;
+    white-space: pre-wrap;
+}
+
+.ticket .buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ticket button {
+    visibility: hidden;
+    border: none;
+    text-decoration: none;
+    background-color: var(--main-background-blue);
+    padding: 0.5em 0 0 1em;
+    font-weight: bold;
+}
+
+.ticket:hover button {
+    visibility: visible;
+    outline:none;
+}
+
+.ticket:hover button:hover {
+    text-decoration: underline;
+}
+
+.ticket .ticketContent {
+    padding-top: 0.5em;
+}
+
+.ticket .ticketInfo {
+    padding-top: 0.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ticket span {
+    padding: 0 0.25em;
+    font-size: small;
+}
+
+.ticket .label {
+    background-color: var(--main-light-blue);
+    padding: 0.25em 0.5em;
+    margin-left: 0.25em;
+    border-radius: 10%;
+}
+
+.ticket .ticketUserInfo {
+    font-style: italic;
+}
+
+.ticket .ticketUserEmail {
+    padding-right: 0.5em;
+    border-right-color: black;
+    border-right-style: solid;
+    border-right-width: thin;
+}
+
+.hiddenTicket {
+    display: none;
+}
